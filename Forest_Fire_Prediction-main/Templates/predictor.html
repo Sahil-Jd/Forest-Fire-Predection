@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href={{url_for('static',filename='style11.css')}}>  
+    <title>Document</title>
+</head>
+
+<body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    
+        <form action="/predict" method="post" class="form">
+          <h1><center>Predictor</center></h1>
+          <div class="row">
+          <div class="col-md-6 my-2">
+           <div class="md-form">
+             <label for="latitude" class="form-label" style="color:#9c3030;">Latitude</label>
+             <input type="text" class="form-control" id="latitude" name="latitude">
+          </div>
+          </div>
+          <div class="col-md-6 my-2">
+          <div class="md-form">
+             <label for="longitude" class="form-label" style="color:#9c3030;">Longitude</label>
+             <input type="text" class="form-control" id="longitude" name="longitude">
+       </div>
+       </div>
+       <div class="col-md-6 my-2">
+       <div class="md-form">
+          <label for="brightness" class="form-label" style="color:#9c3030;">Brightness</label>
+          <input type="text" class="form-control" id="brightness" name="brightness">
+       </div>
+       </div>
+       <div class="col-md-6 my-2">
+       <div class="md-form">
+          <label for="track" class="form-label" style="color:#9c3030;">Track</label>
+          <input type="text" class="form-control" id="track" name="track">
+       </div>
+       </div>
+       <div class="col-md-6 my-2">
+       <div class="md-form">
+          <label for="acq_time" class="form-label" style="color:#9c3030;">Acquisition Time</label>
+          <input type="text" class="form-control" id="acq_time" name="acq_time">
+       </div>
+       </div>
+       <div class="col-md-6 my-2">
+       <div class="md-form">
+          <label for="confidence" class="form-label" style="color:#9c3030;">Confidence</label>
+          <input type="text" class="form-control" id="confidence" name="confidence">
+       </div>
+       </div>
+       <div class="col-12">
+       <div class="md-form">
+    <label for="daynight" class="form-label" style="color:#9c3030;">Day/Night</label>
+    <select id="daynight" class="form-select" name="daynight" style="color:#9c3030;">
+      <option selected style="color:#9c3030;">Select</option>
+      <option value="day" style="color:#9c3030;">Day</option>
+      <option value="night" style="color:#9c3030;">Night</option>
+    </select>
+    </div>  
+    </div>
+              <br>
+              
+    <div class="col-md-6 my-2 d-flex align-items-end justify-content-around">
+        
+    <button type="submit" class="btn btn-info button" style="margin-left: 100%;background-color:#FFDAB9;color:#9c3030;border:#FFDAB9;">Predict</button>
+              </div>         
+<br>
+</form>
+<h3  style="color:#9c3030;"><center>{{ prediction_text }}</center><h3>
+   
+</body>
+
+</html>

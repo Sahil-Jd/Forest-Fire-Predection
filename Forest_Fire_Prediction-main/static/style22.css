@@ -1,0 +1,14 @@
+section:nth-child(1) {
+	justify-content: flex-start;
+	background: linear-gradient(#0004, #0004),
+		url(https://cms.qz.com/wp-content/uploads/2017/09/ap_17249724054042.jpg?quality=80&strip=all&w=3600)
+			no-repeat;
+	background-size: cover;
+	background-position: center;
+	color: #fff;
+}
+
+section:nth-child(1) .media-icons i {
+	color: var(--primary-color);
+	color: #eee;
+}
